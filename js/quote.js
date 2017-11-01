@@ -1,4 +1,4 @@
-var text = ["I love you the more in that I believe you had liked me for my own sake and for nothing else. ~John Keats",
+var myText = ["I love you the more in that I believe you had liked me for my own sake and for nothing else. ~John Keats",
 "But man is not made for defeat. A man can be destroyed but not defeated. ~Ernest Hemingway",
 "When you reach the end of your rope, tie a knot in it and hang on. ~Franklin D. Roosevelt",
 "There is nothing permanent except change. ~Heraclitus",
@@ -126,3 +126,20 @@ var text = ["I love you the more in that I believe you had liked me for my own s
 "It is during our darkest moments that we must focus to see the light. ~Aristotle",
 "Keep love in your heart. A life without it is like a sunless garden when the flowers are dead. ~Oscar Wilde",
 "The best and most beautiful things in the world cannot be seen or even touched - they must be felt with the heart. ~Helen Keller",]
+$(document).ready(function(){
+  quoteMachine();
+});
+
+$("button").click(function(){
+  quoteMachine();
+});
+
+function quoteMachine(){
+    var num = Math.floor(Math.random() * myText.length);
+    console.log(num);
+    $("h1").text(myText[num]);
+
+}
+
+//TODO Add function to change background and button colors when clicking new quote button.
+//TODO Make the quote Author always appear on a new line below the quote.
